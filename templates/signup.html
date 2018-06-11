@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ride my way Sign up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename='css/signup.css')}}" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+            <header>
+                    <div class="container">
+                        <div id="branding">
+                            <h1><span class="highlight">RIDE</span> MY WAY</h1>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li class="current"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/services">Services</a></li>
+                            </ul>       
+                        </nav>
+                    </div>
+                </header>
+                <h1 id="lo">Sign Up Page</h1>
+                <div id="login-content">
+                    <div class="loginbox">
+                        <h3>Sign Up here</h3>
+                        <form method="POST" action="/login">
+                            <p for="user">Username</p>
+                            <input type="text" id="user" name="" placeholder="">
+                            <p for="emai">Email</p>
+                            <input type="email" id="user" name="" placeholder="">
+                            <p for="usertype">User type</p>
+                             <select name="" id="usertype">
+                                 <option value=""></option>
+                                 <option value="Driver">Driver</option>
+                                 <option value="Passenger">Passenger</option>
+                             </select>
+                        
+                            <p for="password">Password</p>
+                            <input type="password" id="password" name="password" placeholder="">
+                            <p for="confirm">Password</p>
+                            <input type="password" id="confirm" name="confirm" placeholder="">
+                            <input type="submit" name="submit" value="Submit">+
+                            <a href="/">Home page</a>
+                            <a href="/login">Login  page</a>
+
+                        </form>
+
+                    </div>
+                    
+                </div>
+            <footer>
+                    <p>Ride my way, copyright &copy;, 2018</p>
+            </footer>
+    </body>
+</html>
