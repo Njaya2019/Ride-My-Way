@@ -70,7 +70,6 @@ header .highlight, header .current a{
     color: red;
     font-weight: bold;
 }
-
 header a:hover{
     color: black;
     font-weight: bold;
