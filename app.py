@@ -14,5 +14,13 @@ def login():
 def signup():
     return render_template('signup.html')
 
+@app.route('/driver')
+def driver():
+    return render_template('driver.html')
+
+@app.route('/rides')
+def rides():
+    return render_template('rides.html')
+
 if __name__=='__main__':
     app.run(debug=True)

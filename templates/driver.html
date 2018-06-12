@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ride my way driver form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename='css/driver.css')}}" />
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="container">
+   <header>
+
+           <div id="branding">
+               <h1>Driver's page</h1>
+           </div>
+           <nav>
+               <ul>
+                   <li><a href="/">Home</a></li>
+                   <li><a href="/rides">Rides</a></li>
+                   <li><a href="/login">Log out</a></li>
+               </ul>       
+           </nav>
+       
+   </header>
+   <div class="container2">
+       <h2>Offer a ride</h2>
+       <form action="">
+       <p>Ride route:</p>
+       <select name="ride" id="ride">
+           <option></option>
+           <option>Mishomoroni to Mwembe Tayari</option>
+           <option>Mtwapa to GPO</option>
+        </select>
+       <p>Place:</p>
+       <input type="text" name="place" id="place" placeholder="">
+       <p>Date:</p>
+       <input type="date" name="date" id="date">
+       <p>Time:</p>
+       <input type="time" name="time" id="time">
+       <p>Cost:</p>
+       <input type="text" name="cost" id="cost">
+       <p>contacts</p>
+       <input type="tel" name="contacts" id="contacts">
+       <input type="submit" name="submit" value="submit ride">
+    </form>
+   </div>
+      <div class="container3">
+       <h3 id="offeredRides">Rides offered</h3>
+       <table>
+           <thead>
+               <th></th><th>Ride name</th><th>Place to take ride</th><th>Date</th><th>Time</th><th>Cost</th><th>contacts</th>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>mm</td>
+                   <td> nn</td>
+                   <td>bbggfhgjjh</td>
+                   <td>ccjhkj</td>
+                   <td>ccddgfhf</td>
+                   <td>ccss</td>
+                   <td>sdfghjklzxcvb</td>
+               </tr>
+           </tbody>
+       </table>
+       <h3 id="offeredRides">Ride requests</h3>
+       <table>
+        <thead>
+            <th>Accept request</th><th>Reject request</th><th>Passenger name</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button name="accept" id="accept">Accept</button></td>
+                <td><button name="reject" id="reject">Reject</button></td>
+                <td>bbggfhgjjh</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+   <footer>
+       <p>Ride my way, copyright &copy;, 2018</p>
+   </footer>
+</div>
+</body>
+</html>
