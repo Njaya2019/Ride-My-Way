@@ -22,5 +22,10 @@ def driver():
 def rides():
     return render_template('rides.html')
 
+@app.route('/passengers')
+def passengers():
+    return render_template('passengers.html')
+
+
 if __name__=='__main__':
     app.run(debug=True)

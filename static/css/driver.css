@@ -71,7 +71,7 @@ header a:hover{
 .container2{
     float: left;
     margin-top: 38px;
-    width: 320px;
+    width: 32%;
     height: 500px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -164,14 +164,8 @@ header a:hover{
 }
 
 table, th, td {
-    border: 1px solid black;
-}
-table{
-    
-    margin-top: 20px;
-    margin-right: 40px;
-    width: 500px;
 
+    border: 1px solid black;
 }
 footer{
     padding: 20px;
@@ -193,11 +187,19 @@ footer{
 }
 .container3{
     float: right;
-    margin-top: 30px;
-    width: 560px;
+    margin-top: 25px;
+    width: 68%;
     height: auto;
     box-sizing: border-box;
     outline: 30px
+}
+.container3 table{
+    margin-top: 20px;
+    margin-right: 40px;
+ margin-left: 10px;
+ width: 98%;
+
+
 }
 
 td #accept{
