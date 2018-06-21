@@ -9,5 +9,4 @@ def client(request):
 
 def test_viewRides(client):
     response=client.get('/rides')
-    assert response.sttus_code==200
-    
+    assert response.status_code==200
