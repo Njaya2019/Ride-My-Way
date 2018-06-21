@@ -5,5 +5,5 @@ python:
 install:
   -pip install pytest
 
-script: python mywayEp.py
+script: test_ridemyway.py
    
