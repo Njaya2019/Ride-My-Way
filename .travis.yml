@@ -3,6 +3,7 @@ python:
  - 3.6
 
 install:
+  -pip install flask
   -pip install pytest
 
 script: python test_ridemyway.py
