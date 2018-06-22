@@ -25,7 +25,7 @@ users=[{'id':1,
          'password':'w1986k'
        }
        ]
-requests=[{'id':1,'passenger_id':2,'rideoffered_id':1}]
+requests=[]
 
 add_ride={
              'id':3,
@@ -34,3 +34,4 @@ add_ride={
              'time':'9:00 am',
              'contacts':'0727645367',
 }
+
