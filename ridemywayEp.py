@@ -4,7 +4,6 @@ app=Flask(__name__)
 
 
 
-
 @app.route('/rides', methods=['POST'])
 def add_a_ride():
     global add_ride
@@ -21,13 +20,6 @@ def add_a_ride():
                     return jsonify({'rides':ride_offers})
     
     
-    
-
-
-            
-    
-
-
 
 if __name__=='__main__':
     app.run(debug=True)
