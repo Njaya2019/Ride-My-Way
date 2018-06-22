@@ -1,6 +1,5 @@
-import json
 import pytest
-from ridemywayEp import app
+from viewARide import app
 
 @pytest.fixture
 def client(request):
