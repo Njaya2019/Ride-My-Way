@@ -9,7 +9,7 @@ app=Flask(__name__)
 def viewRides():
     return jsonify({'rides':ride_offers})
 
-@app.route('/rides/<int:id>', methods=['GET'])
+@app.route('/rides/<int:id>',methods=['GET'])
 def view_a_ride(id):
     for ride_offer in ride_offers:
         ride_offer_id=ride_offer['id']
