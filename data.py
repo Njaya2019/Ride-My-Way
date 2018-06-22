@@ -26,3 +26,12 @@ users=[{'id':1,
        }
        ]
 requests=[{'id':1,'passenger_id':2,'rideoffered_id':1}]
+
+ride={
+             'id':3,
+             'ride_route':'Malindi to Mombasa',
+             'date_of_ride':'29/6/2018',
+             'time':'9:00 am',
+             'contacts':'0727645367',
+             'driver_id':2
+}
