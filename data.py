@@ -12,3 +12,25 @@ ride_offers=[{'id':1,
               'contacts':'0706714059',
               'driver_id':2
             }]
+
+users=[{'id':1,
+        'email':'njayaandrew@gmail.com',
+        'usertype':'passenger',
+        'password':'a1990n'
+       },
+       {
+         'id':2,
+         'email':'njayaandrew@gmail.com',
+         'usertype':'driver',
+         'password':'w1986k'
+       }
+       ]
+
+
+add_ride={
+             'id':3,
+             'ride_route':'Malindi to Mombasa',
+             'date_of_ride':'29/6/2018',
+             'time':'9:00 am',
+             'contacts':'0727645367',
+}
