@@ -5,9 +5,6 @@ app=Flask(__name__)
 
 
 
-@app.route('/rides', methods=['GET'])
-def viewRides():
-    return jsonify({'rides':ride_offers})
 
 @app.route('/rides/<int:id>',methods=['GET'])
 def view_a_ride(id):
