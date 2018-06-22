@@ -1,6 +1,6 @@
-# Ride my way project
+# Ride my way endpoints
 [![Build Status](https://travis-ci.org/Njaya2019/Ride-My-Way.svg?branch=endpointMakeRequest)](https://travis-ci.org/Njaya2019/Ride-My-Way)
 
 
-Added an end point to make a request for a ride
+These are all endpoints of the app
 
