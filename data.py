@@ -12,17 +12,3 @@ ride_offers=[{'id':1,
               'contacts':'0706714059',
               'driver_id':2
             }]
-
-users=[{'id':1,
-        'email':'njayaandrew@gmail.com',
-        'usertype':'passenger',
-        'password':'a1990n'
-       },
-       {
-         'id':2,
-         'email':'njayaandrew@gmail.com',
-         'usertype':'driver',
-         'password':'w1986k'
-       }
-       ]
-requests=[{'id':1,'passenger_id':2,'rideoffered_id':1}]
