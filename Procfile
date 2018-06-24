@@ -1,1 +1,1 @@
-web:gunicorn rmw:app
+web: gunicorn -b $PORT rmw:app
