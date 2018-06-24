@@ -4,25 +4,25 @@ app=Flask(__name__)
 
 @app.route('/', methods=["GET","POST"])
 def index():
-    return render_template('index.html',methods=["GET","POST"])
+    return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login',methods=["GET"])
 def login():
-    return render_template('login.html',methods=["GET","POST"])
+    return render_template('login.html')
 
-@app.route('/signup')
+@app.route('/signup',methods=["GET"])
 def signup():
-    return render_template('signup.html',methods=["GET","POST"])
+    return render_template('signup.html')
 
-@app.route('/driver')
+@app.route('/driver',methods=["GET"])
 def driver():
-    return render_template('driver.html', methods=["GET","POST"])
+    return render_template('driver.html')
 
 @app.route('/rides')
 def rides():
-    return render_template('rides.html', methods=["GET","POST"])
+    return render_template('rides.html')
 
-@app.route('/passengers', methods=["GET","POST"])
+@app.route('/passengers', methods=["GET"])
 def passengers():
     return render_template('passengers.html')
 
