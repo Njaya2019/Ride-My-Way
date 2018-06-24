@@ -1,1 +1,1 @@
-web:gunicorn ViewRides:app
+web:gunicorn rmw:app

@@ -1,3 +1,6 @@
 [
-  "test_addRide.py::test_add_a_ride"
+  "test_rmw.py::test_viewRides",
+  "test_rmw.py::test_view_a_ride",
+  "test_rmw.py::test_make_request",
+  "test_rmw.py::test_add_a_ride"
 ]
