@@ -3,13 +3,11 @@ python:
   - "3.7-dev"  # 3.7 development branch
 
 install: "pip install -r requirements.txt"
-         "pip install coverage"
-         "pip install coveralls"
+         
 
         
   
 
 script: "python test_rmw.py"
-        "cd C:\Users\Andrew\Ride-My-Way\ride.my.way>"
-        "nosetests test_rmw.py --with-coverage --cover-package-app"
+       
 
