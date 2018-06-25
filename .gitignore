@@ -1,1 +1,6 @@
-env
+env/*
+Procfile
+requirements.txt
+.pytest_cache
+__pycache__
+.travis.yml
