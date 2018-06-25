@@ -1,6 +1,6 @@
 # Ride my way project user interfaces
 
-#HTML documents
+# HTML documents
 -Home page-index.html.
 -sign up page-signup.html.
 -login page-login.html.
@@ -8,7 +8,7 @@
 -passenger's page where he/she will view available rides-passengers.html.
 -accepted rides page where a driver will view the accepted rides he/she            accepted-acceptedrides.html.
 
-#CSS files
+# CSS files
 css files to style html up documents
 -acceptedrides.css
 -passengers.css
