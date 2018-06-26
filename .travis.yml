@@ -7,7 +7,6 @@ install:
          - pip install coverage
 script:  
          - python test_rmw.py
-         - coverage report -m
 
 after_success: 
                - coveralls
