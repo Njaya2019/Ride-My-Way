@@ -8,6 +8,7 @@ install:
          
 script:  
          - python test_rmw.py
+         - python rmy.py
          - coverage report -m
 
 after_success: 
