@@ -9,8 +9,6 @@ install:
          - pip install nose
 script:  
          - python test_rmw.py
-         - cd C:\Users\Andrew
-         - nosetest test_rmw.py --with-coverage --cover-package=app
 
 after_success: 
                - coveralls
