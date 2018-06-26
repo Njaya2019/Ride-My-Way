@@ -5,7 +5,8 @@ python:
 install: 
          - pip install -r requirements.txt
          - pip install coverage
-         - pip install python-nose
+         - pip install  coveralls
+         - pip install nose
 script:  
          - python test_rmw.py
          - cd C:\Users\Andrew\Ride-My-Way\ride.my.way
