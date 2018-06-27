@@ -1,3 +1,4 @@
+from flask  import request
 #data of all users,rides offered and requests made on rides offered
 ride_offers=[{'id':1,
              'ride_route':'Mtwapa to Mazeras',
@@ -28,11 +29,5 @@ users=[{'id':1,
 
 requests=[]
 
-add_ride={
-             'id':3,
-             'ride_route':'Malindi to Mombasa',
-             'date_of_ride':'29/6/2018',
-             'time':'9:00 am',
-             'contacts':'0727645367',
-}
+
 

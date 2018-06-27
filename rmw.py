@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
-from data import ride_offers, add_ride, users, requests
+from data import ride_offers, users, requests
+
 app=Flask(__name__)
 
 
+add_ride={}
 
-
-@app.route('/rides', methods=['GET'])
+@app.route('/ridesOffered', methods=['GET'])
 def viewRides():
     return jsonify({'rides':ride_offers})
 
@@ -20,17 +21,11 @@ def view_a_ride(id):
 @app.route('/rides', methods=['POST'])
 def add_a_ride():
     global add_ride
-    ride_id_to_add=add_ride['id']
-    for ride_offer in ride_offers:
-        ride_offer_id=ride_offer['id']
-        if ride_offer_id==ride_id_to_add:
-            return 'ride exists'
-        else:
-            for user in users:
-                if user['usertype']=='driver':
-                    add_ride.update({'driver_id':user['id']})
-                    ride_offers.append(add_ride)
-                    return jsonify({'rides':ride_offers})
+    for user in users:
+        if user['usertype']=='driver':
+            add_ride.update({'driver_id':user['id']})
+            ride_offers.append(add_ride)
+            return jsonify({'rides':ride_offers})
 
 @app.route('/rides/<int:ride_id>/request', methods=['POST'])
 def make_request(ride_id):
