@@ -1,6 +1,6 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify,request
 from flask_restplus import Api, Resource, fields,inputs,reqparse
-from rmw import viewRides, view_a_ride, add_a_ride,requests,make_request
+
 #create instance of flask
 app=Flask(__name__)
 #create class Api instance and pass instance of flask and other constructor 
@@ -13,15 +13,7 @@ ride_offers=[{'id':1,
              'date_of_ride':'26/6/2018',
              'time':'9:00 am',
              'contacts':'0727645367',
-             'driver_id':2},
-            { 'id':2,
-              'ride_route':'Bamburi to Kilifi',
-              'date_of_ride':'3/7/2018',
-              'time':'11:00 am',
-              'contacts':'0706714059',
-              'driver_id':2
-            }]
-
+             'driver_id':2}]
 users=[{'id':1,
         'email':'njayaandrew@gmail.com',
         'usertype':'passenger',
@@ -39,80 +31,61 @@ requests=[]
 
 
 #view all rides
-@new_api.route('/ridesOffered')
+@new_api.route('/ridesAvailable')
 class rides(Resource):
-    def get(self):        
-        def viewRides():
-            return jsonify({'rides':ride_offers})
+    def get(self):    
+        return {'rides':ride_offers}
 
     
 
 #class to request a specific ride
-parser = new_api.parser()
-parser.add_argument('Ride to view', type=int, required=True, help='Ride id')
 
-@new_api.doc(parser=parser)
+
+
 @new_api.route('/rides/<int:id>')
-class View_aride(Resource):
+class View_a_ride(Resource):
     def get(self, id):
-        def view_a_ride(id):
-            
-            for ride_offer in ride_offers:
-                
-                ride_offer_id=ride_offer['id']
-                if ride_offer_id==id:
-                    
-                    return jsonify({'rides':ride_offer})
-        
+        for ride_offer in ride_offers:
+            ride_offer_id=ride_offer['id']
+            if ride_offer_id==id:
+                return {'rides':ride_offer}
+     
+a_ride=new_api.model('ride',{'id':fields.Integer,'ride_route':fields.String,
+'date_of_ride':fields.Date,'time':fields.DateTime,'contacts':fields.Integer,
+ 'driver_id':fields.Integer
+})
 
-
-
-
-# A class to add a ride
-parser= new_api.parser()
-parser.add_argument('id', type=int, required=True, help='id')
-parser.add_argument('ride_route', type=str, required=True, help='route')
-parser.add_argument('date_of_ride', type=str, required=True, help='date')
-parser.add_argument('time', type=str, required=True, help='time')
-parser.add_argument('contacts', type=int, required=True, help='contacts')
-
-
-
-@new_api.doc(parser=parser)
 @new_api.route('/rides')
-class Add_aride(Resource):
-    def put(self):
-        
-        global add_ride
-        args = parser.parse_args()
-        add_ride.update({'id':args['id'],'ride_route':args['ride_route'],'date_of_ride':args['date_of_ride'],'time':args['time'],'contacts':args['contacts']})
-        rides=[]
-        rides.append(add_ride)
-        return jsonify({'Rides':rides})
+class Add_Ride(Resource):
+    @new_api.expect(a_ride)
+    def post(self):
+        ride_offers.append(new_api.payload)
+        return {'ride':ride_offers}
+     
 
-# A class to add a ride
-@new_api.route('/rides/<int:ride_id>/request')
+
+
+
+
+
+
+
+
+@new_api.route('/rides/<int:requested_ride_id>/request')
 class Make_ride_request(Resource):
-    def put(self,ride_id):
-        global users,requests,ride_offers
-        def make_request(ride_id):
-            
-            global requests
-            for ride_offer in ride_offers:
-                
-                ride_offer_id=ride_offer['id']
-                if ride_offer_id==ride_id:
-                    
-                     for user in users:
-                         
-                        if user['usertype']=='passenger':
-                             
-                            request={'id':1,
+    global users,requests,ride_offers
+    def post(self,requested_ride_id):
+        for ride_offer in ride_offers:
+            ride_offer_id=ride_offer['id']
+            if ride_offer_id==requested_ride_id:
+                for user in users: 
+                    if user['usertype']=='passenger':
+                        request={'id':1,
                             'passenger_id':user['id'],
                             'driver_id':ride_offer['driver_id'],
                             'rideoffered_id':ride_offer['id']}
-                            requests.append(request)
-                            return jsonify({'Rides requsted':requests})
+                        requests.append(request)
+                        return {'Rides requsted':requests}
         
         
     
