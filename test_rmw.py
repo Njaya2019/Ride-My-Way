@@ -5,7 +5,7 @@ client=app.test_client()
    
 
 def test_viewRides():
-    response=client.get('/rides')
+    response=client.get('/ridesOffered')
     assert response.status_code==200
 
 def test_view_a_ride():

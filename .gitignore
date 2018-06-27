@@ -1,7 +1,9 @@
 env/*
-Procfile
+.vscode
 requirements.txt
 .pytest_cache
 __pycache__
 
 .coverage
+.coveralls.yml
+
