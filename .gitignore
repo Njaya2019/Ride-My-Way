@@ -1,10 +1,12 @@
 env/*
-.vscode
+.vscode/*
 requirements.txt
-.pytest_cache
-__pycache__
-procfile
+.pytest_cache/*
+__pycache__/*
+Procfile
 .coverage
 .coveralls.yml
+.travis.yml
+
 
 
